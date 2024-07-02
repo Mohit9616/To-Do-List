@@ -1,0 +1,341 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    color: #000;
+}
+
+.sidebar {
+    background-color: #004d61;
+    color: black;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    resize: horizontal;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #00acc1;
+}
+
+.sub-menu {
+    padding-left: 20px;
+}
+
+.sidebar ul li.favorites a {
+    color: #ffd700;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #000;
+    overflow: hidden;
+}
+
+.main-content h1 {
+    text-align: center;
+    color: #000;
+    font-size: 50px;
+}
+
+.main-content h2 {
+    text-align: center;
+    color: #000;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+#search-task {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #004d61;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 50%;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #00acc1;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #00838f;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 50%;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #004d61;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #00acc1;
+}
+
+select {
+    width: 20%;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #004d61;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: border 0.3s ease;
+}
+
+select:focus {
+    border-color: #00acc1;
+}
+
+button {
+    width: 15%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    background-color: #00acc1;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #00838f;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+li {
+    background-color: #e0f7fa;
+    padding: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #b2ebf2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+li:nth-child(even) {
+    background-color: #b2ebf2;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.complete-btn {
+    background-color: #4caf50;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.complete-btn:hover {
+    background-color: #388e3c;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.history {
+    margin-top: 20px;
+    max-height: calc(100vh - 280px);
+    overflow-y: auto;
+}
+
+.history-controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.history select {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #004d61;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.history button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #f44336;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.history button:hover {
+    background-color: #d32f2f;
+}
+
+.back-btn {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #00acc1;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.back-btn:hover {
+    background-color: #00838f;
+}
+
+/* New CSS for responsiveness */
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        transform: translateX(-100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+        flex: none;
+    }
+
+    .top-bar {
+        justify-content: space-between;
+    }
+
+    #search-task {
+        width: 70%;
+    }
+
+    .toggle-sidebar-btn {
+        display: block;
+        background-color: #00acc1;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        margin-bottom: 20px;
+    }
+
+    .toggle-sidebar-btn:hover {
+        background-color: #00838f;
+    }
+}
+
+@media (min-width: 769px) {
+    .toggle-sidebar-btn {
+        display: none;
+    }
+}
